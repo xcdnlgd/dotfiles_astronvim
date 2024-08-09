@@ -8,6 +8,8 @@ return {
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.sql" },
+  { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.motion.leap-nvim" },
   -- { import = "astrocommunity.completion.cmp-spell" },
   { import = "astrocommunity.editing-support.dial-nvim" },
