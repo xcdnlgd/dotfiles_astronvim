@@ -63,15 +63,11 @@ return {
 
         ["<Leader>br"] = false,
         ["<Leader>bh"] = {
-          function()
-            require("astrocore.buffer").close_left()
-          end,
+          function() require("astrocore.buffer").close_left() end,
           desc = "Close all buffers to the left",
         },
         ["<Leader>bl"] = {
-          function()
-            require("astrocore.buffer").close_right()
-          end,
+          function() require("astrocore.buffer").close_right() end,
           desc = "Close all buffers to the right",
         },
 

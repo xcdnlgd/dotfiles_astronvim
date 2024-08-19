@@ -43,18 +43,21 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
-      rust_analyzer = {
-        -- on_attach = function(client, bufnr) vim.lsp.inlay_hint.enable(true, { bufnr = bufnr }) end,
-        -- settings = {
-        --     ["rust-analyzer"] = {
-        --       completion = {
-        --         postfix = {
-        --           enable = false
-        --         }
-        --       }
-        --     },
-        --   },
-      },
+      -- rust_analyzer = {
+      --   on_attach = function(client, bufnr) vim.lsp.inlay_hint.enable(true, { bufnr = bufnr }) end,
+      --   settings = {
+      --     ["rust-analyzer"] = {
+      --       completion = {
+      --         postfix = {
+      --           enable = false
+      --         }
+      --       },
+      --       procMacro = {
+      --         enable = true,
+      --       },
+      --     },
+      --   },
+      -- },
     },
     -- customize how language servers are attached
     handlers = {
@@ -102,6 +105,10 @@ return {
           cond = function(client)
             return client.supports_method "textDocument/semanticTokens/full" and vim.lsp.semantic_tokens ~= nil
           end,
+        },
+        ["<Leader>lG"] = {
+          ":Telescope lsp_dynamic_workspace_symbols<cr>",
+          desc = "Search workspace symbols",
         },
       },
     },

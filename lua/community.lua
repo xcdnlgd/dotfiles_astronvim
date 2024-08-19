@@ -11,7 +11,6 @@ return {
   { import = "astrocommunity.pack.sql" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.motion.leap-nvim" },
-  -- { import = "astrocommunity.completion.cmp-spell" },
   { import = "astrocommunity.editing-support.dial-nvim" },
   -- import/override with your plugins folder
 }
