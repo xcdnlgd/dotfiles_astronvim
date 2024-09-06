@@ -18,6 +18,10 @@ keymap("n", "c", '"_c', opts)
 keymap("n", "C", '"_C', opts)
 
 
+-- move line up and down
+keymap("n", "<M-j>", "<cmd>m .+1<CR>==", opts)
+keymap("n", "<M-k>", "<cmd>m .-2<CR>==", opts)
+
 keymap("v", ">", ">gv", opts)
 keymap("v", "<", "<gv", opts)
 

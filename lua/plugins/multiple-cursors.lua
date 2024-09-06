@@ -19,5 +19,8 @@ return {
       mode = { "n", "x" },
       desc = "Add cursor and jump to next cword",
     },
+    { "<C-LeftMouse>", "<Cmd>MultipleCursorsMouseAddDelete<CR>", mode = { "n", "i" }, desc = "Add or remove cursor" },
+    { "<A-K>", "<Cmd>MultipleCursorsAddUp<CR>", mode = { "n", "x" }, desc = "Add cursor and move up" },
+    { "<A-J>", "<Cmd>MultipleCursorsAddDown<CR>", mode = { "n", "x" }, desc = "Add cursor and move down" },
   },
 }
