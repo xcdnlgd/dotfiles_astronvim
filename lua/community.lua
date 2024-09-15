@@ -12,5 +12,6 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.wgsl" },
   -- import/override with your plugins folder
 }
