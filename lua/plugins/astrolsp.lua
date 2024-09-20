@@ -106,6 +106,10 @@ return {
             return client.supports_method "textDocument/semanticTokens/full" and vim.lsp.semantic_tokens ~= nil
           end,
         },
+        ["<Leader>lR"] = {
+          ":Telescope lsp_references<cr>",
+          desc = "Search references",
+        },
         ["<Leader>lG"] = {
           ":Telescope lsp_dynamic_workspace_symbols<cr>",
           desc = "Search workspace symbols",
