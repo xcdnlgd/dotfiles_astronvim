@@ -33,6 +33,8 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
         pumheight = 10,
+        tabstop = 4,
+        shiftwidth = 4,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
