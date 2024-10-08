@@ -15,5 +15,6 @@ return {
   { import = "astrocommunity.pack.wgsl" },
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.cpp" },
   -- import/override with your plugins folder
 }
