@@ -58,6 +58,15 @@ return {
       --     },
       --   },
       -- },
+      basedpyright = {
+        settings = {
+          basedpyright = {
+            analysis = {
+              typeCheckingMode = "off",
+            },
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {
