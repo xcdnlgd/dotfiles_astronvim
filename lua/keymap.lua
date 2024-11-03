@@ -19,8 +19,12 @@ keymap("n", "C", '"_C', opts)
 
 
 -- move line up and down
-keymap("n", "<M-j>", "<cmd>m .+1<CR>==", opts)
 keymap("n", "<M-k>", "<cmd>m .-2<CR>==", opts)
+keymap("n", "<M-j>", "<cmd>m .+1<CR>==", opts)
+
+-- duplicate line up and down
+keymap("n", "<M-K>", "<cmd>t.<CR>k", opts)
+keymap("n", "<M-J>", "<cmd>t.<CR>", opts)
 
 keymap("v", ">", ">gv", opts)
 keymap("v", "<", "<gv", opts)

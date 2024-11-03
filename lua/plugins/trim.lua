@@ -4,7 +4,7 @@ return {
   opts = {
     -- if you want to ignore markdown file.
     -- you can specify filetypes.
-    ft_blocklist = { "TelescopePrompt", "TelescopeResults", "toggleterm", "lazy", "alpha", "neo-tree", "mason" },
+    ft_blocklist = { "TelescopePrompt", "TelescopeResults", "toggleterm", "lazy", "alpha", "neo-tree", "neo-tree-popup", "mason" },
 
     -- if you want to remove multiple blank lines
     -- patterns = {
