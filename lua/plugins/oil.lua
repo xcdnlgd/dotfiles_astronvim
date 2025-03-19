@@ -1,8 +1,8 @@
 ---@type LazySpec
 return {
   "stevearc/oil.nvim",
-  opts = {
-    columns = {
+  opts = function(_, opts)
+    opts.columns = {
       "icon",
       {
         "size",
@@ -16,8 +16,14 @@ return {
         "permissions",
         highlight = "blue",
       },
-    },
-  },
+    }
+    opts.win_options = {
+      wrap = false,
+      spell = false,
+      list = false,
+      conceallevel = 1,
+    }
+  end,
   -- Optional dependencies
   dependencies = { "nvim-tree/nvim-web-devicons" },
 }
