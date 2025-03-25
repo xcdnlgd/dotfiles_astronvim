@@ -17,14 +17,21 @@ keymap("n", "X", '"_X', opts)
 keymap("n", "c", '"_c', opts)
 keymap("n", "C", '"_C', opts)
 
-
 -- move line up and down
-keymap("n", "<M-k>", "<cmd>m .-2<CR>==", opts)
-keymap("n", "<M-j>", "<cmd>m .+1<CR>==", opts)
+keymap("n", "<M-k>", ":m -2<cr>==", opts) -- == is for auto indent
+keymap("n", "<M-j>", ":m +1<cr>==", opts)
+keymap("i", "<M-k>", "<esc>:m -2<cr>==gi", opts)
+keymap("i", "<M-j>", "<esc>:m +1<cr>==gi", opts)
+keymap("v", "<M-k>", ":m '<-2<cr><esc>gv=gv", opts) -- <esc> to get rid of n lines moved hint
+keymap("v", "<M-j>", ":m '>+1<cr><esc>gv=gv", opts)
 
 -- duplicate line up and down
-keymap("n", "<M-K>", "<cmd>t.<CR>k", opts)
-keymap("n", "<M-J>", "<cmd>t.<CR>", opts)
+keymap("n", "<M-K>", "<cmd>t.<cr>k", opts)
+keymap("n", "<M-J>", "<cmd>t.<cr>", opts)
+keymap("i", "<M-K>", "<esc>:t .<cr>gi", opts)
+keymap("i", "<M-J>", "<esc>:t -1<cr>gi", opts)
+keymap("v", "<M-K>", ":t '><cr>gv", opts)
+keymap("v", "<M-J>", ":t -1<cr>gv", opts)
 
 keymap("v", ">", ">gv", opts)
 keymap("v", "<", "<gv", opts)
