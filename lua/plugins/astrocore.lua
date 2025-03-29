@@ -72,7 +72,31 @@ return {
           function() require("astrocore.buffer").close_right() end,
           desc = "Close all buffers to the right",
         },
-        ["<C-\\>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" }
+        ["<Leader>ft"] = {
+          "<Cmd>TodoTelescope<CR>",
+          desc = "Find TODOs",
+        },
+        ["<Leader>fT"] = {
+          function() require("telescope.builtin").colorscheme { enable_preview = true, ignore_builtins = true } end,
+          desc = "Find themes",
+        },
+        ["]t"] = {
+          function() require("todo-comments").jump_next() end,
+          desc = "Next TODO comment",
+        },
+        ["]T"] = {
+          function() vim.cmd.tabnext() end,
+          desc = "Next tab",
+        },
+        ["[t"] = {
+          function() require("todo-comments").jump_prev() end,
+          desc = "Previous TODO comment",
+        },
+        ["[T"] = {
+          function() vim.cmd.tabprevious() end,
+          desc = "Previous tab",
+        },
+        ["<C-\\>"] = { '<Cmd>execute v:count . "ToggleTerm"<CR>', desc = "Toggle terminal" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
@@ -82,10 +106,10 @@ return {
         -- ["<C-S>"] = false,
       },
       t = {
-        ["<C-\\>"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" }
+        ["<C-\\>"] = { "<Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
       },
       i = {
-        ["<C-\\>"] = { "<Esc><Cmd>ToggleTerm<CR>", desc = "Toggle terminal" }
+        ["<C-\\>"] = { "<Esc><Cmd>ToggleTerm<CR>", desc = "Toggle terminal" },
       },
     },
   },
